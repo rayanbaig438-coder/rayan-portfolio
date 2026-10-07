@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO & Open Graph Meta Tags -->
+  <title>Rayan | Senior Full-Stack Architect & Cyber Systems Craftsman</title>
+  <meta name="description" content="Portfolio of Rayan, a Senior Full-Stack Architect specializing in high-throughput cloud architectures, Rust, TypeScript, and futuristic cyberpunk glassmorphism web experiences.">
+  <meta name="keywords" content="Senior Full Stack Engineer, Cyberpunk Portfolio, Glassmorphism, TypeScript, Rust, Kubernetes, Cloud Architecture, WebGL">
+  <meta name="author" content="Rayan">
+  <meta property="og:title" content="Rayan | Senior Full-Stack Architect & Cyber Systems Craftsman">
+  <meta property="og:description" content="Explore projects, skills, interactive career timeline, and services in a neon cyberpunk glassmorphic portfolio.">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/avatar-cyber.svg">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+  <!-- Background Ambient Glow & Subtle Particle Canvas -->
+  <div class="glow-spot spot-1" aria-hidden="true"></div>
+  <div class="glow-spot spot-2" aria-hidden="true"></div>
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+  <!-- Mobile Top Bar (Visible on mobile viewports < 768px) -->
+  <header class="mobile-header" aria-label="Mobile Navigation">
+    <a href="#hero" class="nav-brand" style="border:none; padding:0;">
+      <img src="assets/avatar-cyber.svg" alt="Rayan Avatar" class="nav-avatar" style="width:34px; height:34px;">
+      <div class="nav-brand-text">
+        <h2>RAYAN</h2>
+      </div>
+    </a>
+    <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle Navigation Menu">
+      ☰
+    </button>
+  </header>
+  <div class="nav-overlay" aria-hidden="true"></div>
+
+  <!-- Global App Layout -->
+  <div class="app-layout">
+
+    <!-- ===================================================================
+         FUTURISTIC VERTICAL NAVIGATION BAR
+         Fixed desktop left dock with glassmorphism & neon active states
+         =================================================================== -->
+    <nav class="vertical-nav" aria-label="Main Navigation">
+      <div>
+        <!-- Profile Brand Badge -->
+        <a href="#hero" class="nav-brand" title="Return to Top">
+          <img src="assets/avatar-cyber.svg" alt="Rayan Cyber Avatar" class="nav-avatar">
+          <div class="nav-brand-text">
+            <h2>RAYAN</h2>
+            <span>&lt;SR_ARCHITECT/&gt;</span>
+          </div>
+        </a>
+
+        <!-- Vertical Navigation Links -->
+        <ul class="nav-links">
+          <li><a href="#hero" class="active"><span class="nav-icon">⚡</span> Home</a></li>
+          <li><a href="#about"><span class="nav-icon">👤</span> About Me</a></li>
+          <li><a href="#skills"><span class="nav-icon">🛠️</span> Skills</a></li>
+          <li><a href="#education"><span class="nav-icon">🎓</span> Education</a></li>
+          <li><a href="#experience"><span class="nav-icon">⏳</span> Experience</a></li>
+          <li><a href="#projects"><span class="nav-icon">🚀</span> Projects</a></li>
+          <li><a href="#achievements"><span class="nav-icon">🏆</span> Achievements</a></li>
+          <li><a href="#services"><span class="nav-icon">💼</span> Services</a></li>
+          <li><a href="#testimonials"><span class="nav-icon">💬</span> Testimonials</a></li>
+          <li><a href="#contact"><span class="nav-icon">✉️</span> Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Controls: Theme Switcher & Status -->
+      <div class="nav-footer">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark and Light mode">
+          🌙 Cyber Dark
+        </button>
+        <div style="font-family:var(--font-code); font-size:0.7rem; color:var(--text-muted); text-align:center;">
+          PING: <span style="color:var(--neon-emerald)">16ms</span> // REGION: EDGE
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content Stream -->
+    <main class="main-content" id="main-content">
+
+      <!-- ===================================================================
+           1. HERO SECTION
+           =================================================================== -->
+      <section id="hero" class="section hero-section" aria-labelledby="hero-title">
+        <div class="hero-grid">
+          
+          <!-- Left Hero Text Content -->
+          <div class="hero-text">
+            <div class="hero-status">
+              <span class="status-dot"></span>
+              <span>SYSTEM ONLINE // OPEN FOR SELECT ENGAGEMENTS</span>
+            </div>
+
+            <h1 class="hero-title" id="hero-title">
+              Hi, I'm <span class="neon-text-gradient">Rayan</span>
+            </h1>
+
+            <p class="hero-subtitle">
+              Senior Full-Stack Architect &amp; Cyber Systems Craftsman
+            </p>
+
+            <p class="hero-bio">
+              Architecting resilient distributed microservices, low-latency cloud infrastructure, 
+              and fluid WebGL-accelerated web experiences with TypeScript, Rust, and modern glassmorphic aesthetics.
+            </p>
+
+            <!-- Quick Stats Row -->
+            <div class="hero-stats">
+              <div class="glass-card stat-box">
+                <div class="stat-num">8+</div>
+                <div class="stat-name">Years XP</div>
+              </div>
+              <div class="glass-card stat-box">
+                <div class="stat-num">50+</div>
+                <div class="stat-name">Shipped Ops</div>
+              </div>
+              <div class="glass-card stat-box">
+                <div class="stat-num">99.9%</div>
+                <div class="stat-name">Uptime SLA</div>
+              </div>
+              <div class="glass-card stat-box">
+                <div class="stat-num">15k+</div>
+                <div class="stat-name">GitHub Stars</div>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="hero-btns">
+              <a href="#projects" class="btn btn-cyan">
+                <span>🚀 Explore Operations</span>
+              </a>
+              <a href="#contact" class="btn btn-pink">
+                <span>✉️ Initiate Contact</span>
+              </a>
+              <a href="#about" class="btn btn-glass">
+                <span>Dossier Specs</span>
+              </a>
+            </div>
+
+            <!-- Social Links -->
+            <div class="hero-socials">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-btn" title="GitHub" aria-label="GitHub Profile">⌨️</a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-btn" title="LinkedIn" aria-label="LinkedIn Profile">💼</a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-btn" title="X / Twitter" aria-label="Twitter Profile">🌐</a>
+              <a href="mailto:rayan@codecraft.dev" class="social-btn" title="Email Rayan" aria-label="Send Email">✉️</a>
+            </div>
+          </div>
+
+          <!-- Right Hero Profile Showcase -->
+          <div class="glass-card hero-card">
+            <img src="assets/avatar-cyber.svg" alt="Rayan Holographic Avatar" class="hero-card-avatar">
+            <h3>Rayan // 0x9A</h3>
+            <p>&lt;Principal Systems Engineer/&gt;</p>
+            
+            <div class="tech-pills">
+              <span class="badge">Next.js 14</span>
+              <span class="badge badge-purple">TypeScript</span>
+              <span class="badge badge-pink">Rust Tokio</span>
+              <span class="badge">Kubernetes</span>
+              <span class="badge badge-purple">eBPF</span>
+              <span class="badge">WebGL</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           2. ABOUT ME SECTION
+           =================================================================== -->
+      <section id="about" class="section" aria-labelledby="about-title">
+        <div class="section-head">
+          <span class="section-tag">// 01. IDENTITY &amp; CORE FOCUS</span>
+          <h2 class="section-title" id="about-title">
+            About <span class="neon-text-gradient">Me</span>
+          </h2>
+          <p class="section-desc">
+            Bridging deeply engineered backend systems with state-of-the-art interactive frontends.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Biography Narrative -->
+          <div class="glass-card about-card">
+            <h3>Engineering Philosophy</h3>
+            <p>
+              Over the last 8+ years, I have architected high-throughput distributed systems, directed full-stack engineering initiatives, and built performant digital experiences handling millions of active requests daily.
+            </p>
+            <p>
+              My philosophy balances runtime performance with developer ergonomics: create resilient zero-downtime microservices, write clean self-documenting code, and design user interfaces with high visual polish, fluid micro-interactions, and accessibility.
+            </p>
+            <div style="margin-top:1.5rem;">
+              <span class="badge badge-pink" style="font-size:0.8rem; padding:0.35rem 0.8rem;">
+                🎯 Focus: Distributed Concurrency, Cloud Architecture &amp; High-Performance UI
+              </span>
+            </div>
+          </div>
+
+          <!-- Cyber Specifications HUD Card -->
+          <div class="glass-card about-card">
+            <h3>Specifications HUD</h3>
+            <div class="specs-list">
+              <div class="spec-item">
+                <span class="spec-key">PRIMARY CLASS:</span>
+                <span class="spec-val">Principal Full-Stack Architect</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-key">SENIORITY:</span>
+                <span class="spec-val">Senior / Staff Lead (8+ Yrs)</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-key">CORE LANGUAGES:</span>
+                <span class="spec-val">TypeScript, Rust, Go, Python</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-key">CLOUD STACK:</span>
+                <span class="spec-val">AWS, GCP, Kubernetes, Docker</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-key">TIMEZONE:</span>
+                <span class="spec-val">UTC±0 to UTC+5:30 (Worldwide Remote)</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-key">AVAILABILITY:</span>
+                <span class="spec-val" style="color:var(--neon-emerald)">🟢 Ready for High-Impact Projects</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           3. SKILLS SECTION
+           =================================================================== -->
+      <section id="skills" class="section" aria-labelledby="skills-title">
+        <div class="section-head">
+          <span class="section-tag">// 02. TECHNICAL ARSENAL</span>
+          <h2 class="section-title" id="skills-title">
+            Skills &amp; <span class="neon-text-gradient">Proficiencies</span>
+          </h2>
+          <p class="section-desc">
+            Filter proficiencies across core development disciplines.
+          </p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="skills-tabs">
+          <button class="tab-btn skill-tab-btn active" data-filter="all">All Disciplines</button>
+          <button class="tab-btn skill-tab-btn" data-filter="frontend">Frontend &amp; UI</button>
+          <button class="tab-btn skill-tab-btn" data-filter="backend">Backend &amp; Systems</button>
+          <button class="tab-btn skill-tab-btn" data-filter="cloud">Cloud &amp; DevOps</button>
+          <button class="tab-btn skill-tab-btn" data-filter="ai">Cyber &amp; AI</button>
+        </div>
+
+        <!-- Skills Grid -->
+        <div class="skills-grid">
+          <!-- Frontend -->
+          <div class="glass-card skill-card" data-category="frontend">
+            <div class="skill-top">
+              <div class="skill-info">
+                <span class="skill-icon">⚡</span>
+                <span class="skill-name">TypeScript / React / Next.js</span>
+              </div>
+              <span class="skill-pct">96%</span>
+            </div>
+            <div class="skill-meter"><div class="meter-fill" style="width:96%"></div></div>
+            <div class="skill-sub">Production Mastered • 7+ Yrs</div>
+          </div>
+
+          <div class="glass-card skill-card" data-category="frontend">
+            <div class="skill-top">
+              <div class="skill-info">
+                <span class="skill-icon">🎨</span>
+                <span class="skill-name">WebGL / CSS / Animations</span>
+              </div>
+              <span class="skill-pct">92%</span>
+            </div>
+            <div class="skill-meter"><div class="meter-fill" style="width:92%"></div></div>
+            <div class="skill-sub">Shaders, 3D Canvas, Glassmorphism</div>
+          </div>
+
+          <!-- Backend -->
+          <div class="glass-card skill-card" data-category="backend">
+            <div class="skill-top">
+              <div class="skill-info">
+                <span class="skill-icon">🦀</span>
+                <span class="skill-name">Rust &amp; High-Concurrency Tokio</span>
+              </div>
+              <span class="skill-pct">90%</span>
+            </div>
+            <div class="skill-meter"><div class="meter-fill" style="width:90%"></div></div>
+            <div class="skill-sub">Zero-Allocation Systems • 4 Yrs</div>
+          </div>
+
+          <div class="glass-card skill-card" data-category="backend">
+            <div class="skill-top">
+              <div class="skill-info">
+                <span class="skill-icon">⚙️</span>
+                <span class="skill-name">Node.js / Go / Microservices</span>
+              </div>
+              <span class="skill-pct">95%</span>
+            </div>
+            <div class="skill-meter"><div class="meter-fill" style="width:95%"></div></div>
+            <div class="skill-sub">High-Throughput APIs, gRPC, Kafka</div>
+          </div>
+
+          <div class="glass-card skill-card" data-category="backend">
+            <div class="skill-top">
+              <div class="skill-info">
+                <span class="skill-icon">🗄️</span>
+                <span class="skill-name">PostgreSQL / Redis / ClickHouse</span>
+              </div>
+              <span class="skill-pct">93%</span>
+            </div>
+            <div class="skill-meter"><div class="meter-fill" style="width:93%"></div></div>
+            <div class="skill-sub">Distributed Sharding &amp; Caching</div>
+          </div>
+
+          <!-- Cloud -->
+          <div class="glass-card skill-card" data-category="cloud">
+            <div class="skill-top">
+              <div class="skill-info">
+                <span class="skill-icon">☸️</span>
+                <span class="skill-name">Kubernetes &amp; Docker</span>
+              </div>
+              <span class="skill-pct">91%</span>
+            </div>
+            <div class="skill-meter"><div class="meter-fill" style="width:91%"></div></div>
+            <div class="skill-sub">Cluster Orchestration, Helm, GitOps</div>
+          </div>
+
+          <div class="glass-card skill-card" data-category="cloud">
+            <div class="skill-top">
+              <div class="skill-info">
+                <span class="skill-icon">☁️</span>
+                <span class="skill-name">AWS / Terraform IaC</span>
+              </div>
+              <span class="skill-pct">94%</span>
+            </div>
+            <div class="skill-meter"><div class="meter-fill" style="width:94%"></div></div>
+            <div class="skill-sub">Multi-Region VPC, ECS, Lambda, S3</div>
+          </div>
+
+          <!-- Cyber & AI -->
+          <div class="glass-card skill-card" data-category="ai">
+            <div class="skill-top">
+              <div class="skill-info">
+                <span class="skill-icon">🤖</span>
+                <span class="skill-name">AI Agent Swarms &amp; RAG</span>
+              </div>
+              <span class="skill-pct">88%</span>
+            </div>
+            <div class="skill-meter"><div class="meter-fill" style="width:88%"></div></div>
+            <div class="skill-sub">Vector DBs, Python, Embeddings</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           4. EDUCATION & CERTIFICATIONS SECTION
+           =================================================================== -->
+      <section id="education" class="section" aria-labelledby="edu-title">
+        <div class="section-head">
+          <span class="section-tag">// 03. ACADEMIC &amp; CREDENTIALS</span>
+          <h2 class="section-title" id="edu-title">
+            Education &amp; <span class="neon-text-gradient">Certifications</span>
+          </h2>
+          <p class="section-desc">
+            Formal foundations in distributed computing paired with recognized industry certifications.
+          </p>
+        </div>
+
+        <div class="edu-grid">
+          <!-- Degrees -->
+          <div>
+            <h3 style="font-size:1.25rem; margin-bottom:1.25rem;">Academic Degrees</h3>
+            
+            <div class="glass-card edu-card">
+              <div class="edu-degree">B.S. in Computer Science &amp; Engineering</div>
+              <div class="edu-school">Tech University of Science // Distributed Systems Honors</div>
+              <div class="edu-time">2014 – 2018 • First Class Honours (GPA 3.92)</div>
+              <p class="edu-desc">
+                Core Focus: Concurrent Algorithms, Operating Systems, Compilers, Distributed Databases, and Network Cryptography.
+              </p>
+            </div>
+
+            <div class="glass-card edu-card">
+              <div class="edu-degree">Advanced Specialization: Cloud Native Architecture</div>
+              <div class="edu-school">MIT Professional Education / Online Fellowship</div>
+              <div class="edu-time">2020 • Completed with Distinction</div>
+              <p class="edu-desc">
+                Research capstone on eBPF telemetry pipelines and zero-trust mesh networking.
+              </p>
+            </div>
+          </div>
+
+          <!-- Certifications -->
+          <div>
+            <h3 style="font-size:1.25rem; margin-bottom:1.25rem;">Industry Certifications</h3>
+
+            <div class="glass-card edu-card">
+              <div class="edu-degree">AWS Certified Solutions Architect – Professional</div>
+              <div class="edu-school">Amazon Web Services</div>
+              <div class="edu-time">Credential ID: AWS-PRO-98124 • Active</div>
+              <p class="edu-desc">Advanced multi-tier cloud infrastructure, automated failover, and serverless architectures.</p>
+            </div>
+
+            <div class="glass-card edu-card">
+              <div class="edu-degree">Certified Kubernetes Administrator (CKA)</div>
+              <div class="edu-school">Cloud Native Computing Foundation (CNCF)</div>
+              <div class="edu-time">Credential ID: CKA-49210 • Active</div>
+              <p class="edu-desc">Production cluster installation, node maintenance, networking policies, and security.</p>
+            </div>
+
+            <div class="glass-card edu-card">
+              <div class="edu-degree">HashiCorp Certified: Terraform Associate</div>
+              <div class="edu-school">HashiCorp</div>
+              <div class="edu-time">Credential ID: TF-ASSOC-7104 • Active</div>
+              <p class="edu-desc">Infrastructure as Code (IaC) governance, modular cloud automation, and state management.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           5. EXPERIENCE SECTION (Interactive Timeline)
+           =================================================================== -->
+      <section id="experience" class="section" aria-labelledby="exp-title">
+        <div class="section-head">
+          <span class="section-tag">// 04. CAREER CHRONOLOGY</span>
+          <h2 class="section-title" id="exp-title">
+            Work <span class="neon-text-gradient">Experience</span>
+          </h2>
+          <p class="section-desc">
+            Proven track record of architecting and shipping mission-critical systems.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <!-- Role 1 -->
+          <div class="timeline-row">
+            <div class="timeline-dot"></div>
+            <div class="glass-card timeline-content">
+              <div class="timeline-head">
+                <div class="timeline-role">Lead Full-Stack Architect</div>
+                <span class="badge">2023 – Present</span>
+              </div>
+              <div class="timeline-org">Nexus Cybernetics Corp</div>
+              <ul class="timeline-bullets">
+                <li>Architected an enterprise telemetry dashboard in Next.js 14 &amp; Go, reducing p99 render latency by 65%.</li>
+                <li>Led a team of 9 engineers shipping multi-tenant cloud pipelines ingesting over 120M events per day.</li>
+                <li>Designed an automated K8s failover mechanism achieving 99.99% uptime across US-East and EU-West regions.</li>
+              </ul>
+              <div style="display:flex; flex-wrap:wrap; gap:0.4rem; margin-top:0.75rem;">
+                <span class="badge">Next.js</span>
+                <span class="badge badge-purple">Go</span>
+                <span class="badge badge-pink">Kubernetes</span>
+                <span class="badge">ClickHouse</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Role 2 -->
+          <div class="timeline-row">
+            <div class="timeline-dot"></div>
+            <div class="glass-card timeline-content">
+              <div class="timeline-head">
+                <div class="timeline-role">Senior Distributed Systems Engineer</div>
+                <span class="badge badge-purple">2021 – 2023</span>
+              </div>
+              <div class="timeline-org">Quantum Cloud Labs</div>
+              <ul class="timeline-bullets">
+                <li>Rebuilt core ledger engine in Rust with async Tokio, elevating throughput from 12k TPS to 150k TPS.</li>
+                <li>Migrated monolithic legacy infrastructure to containerized microservices managed via Terraform IaC.</li>
+                <li>Spearheaded zero-trust identity verification utilizing mutual TLS (mTLS) across all internal VPCs.</li>
+              </ul>
+              <div style="display:flex; flex-wrap:wrap; gap:0.4rem; margin-top:0.75rem;">
+                <span class="badge badge-purple">Rust</span>
+                <span class="badge">Kafka</span>
+                <span class="badge badge-pink">PostgreSQL</span>
+                <span class="badge">Terraform</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Role 3 -->
+          <div class="timeline-row">
+            <div class="timeline-dot"></div>
+            <div class="glass-card timeline-content">
+              <div class="timeline-head">
+                <div class="timeline-role">Full-Stack Software Engineer</div>
+                <span class="badge badge-pink">2018 – 2021</span>
+              </div>
+              <div class="timeline-org">SynthWave Interactive</div>
+              <ul class="timeline-bullets">
+                <li>Engineered interactive WebGL client interfaces and real-time collaboration engines using WebSockets.</li>
+                <li>Developed reusable design systems and micro-frontends adopted across 4 major customer-facing products.</li>
+                <li>Optimized bundle sizes and asset pipelines, achieving consistent 99+ Lighthouse performance scores.</li>
+              </ul>
+              <div style="display:flex; flex-wrap:wrap; gap:0.4rem; margin-top:0.75rem;">
+                <span class="badge">React</span>
+                <span class="badge badge-purple">TypeScript</span>
+                <span class="badge">WebGL</span>
+                <span class="badge badge-pink">Node.js</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           6. PROJECTS SECTION
+           =================================================================== -->
+      <section id="projects" class="section" aria-labelledby="proj-title">
+        <div class="section-head">
+          <span class="section-tag">// 05. FEATURED OPERATIONS</span>
+          <h2 class="section-title" id="proj-title">
+            Key <span class="neon-text-gradient">Projects</span>
+          </h2>
+          <p class="section-desc">
+            Production-grade systems, high-speed graphics engines, and developer tools.
+          </p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="skills-tabs">
+          <button class="tab-btn project-tab-btn active" data-filter="all">All Operations</button>
+          <button class="tab-btn project-tab-btn" data-filter="fullstack">Full-Stack</button>
+          <button class="tab-btn project-tab-btn" data-filter="cloud">Cloud &amp; DevOps</button>
+          <button class="tab-btn project-tab-btn" data-filter="creative">Creative &amp; AI</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <article class="glass-card project-card" data-category="cloud">
+            <div class="project-img-box">
+              <img src="assets/projects/aegisnet.svg" alt="AegisNet Zero-Trust Mesh" class="project-img">
+            </div>
+            <div class="project-info">
+              <h3>AegisNet // Zero-Trust Security Mesh</h3>
+              <p>Distributed security layer and telemetry pipeline using eBPF and Go. Enforces strict zero-trust network policies with 1.2ms latency overhead.</p>
+              <div class="project-tech">
+                <span class="badge">Go</span>
+                <span class="badge badge-purple">eBPF</span>
+                <span class="badge">React</span>
+                <span class="badge badge-pink">Docker</span>
+              </div>
+              <div class="project-links">
+                <a href="#contact" class="project-link"><span>Live Demo ↗</span></a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-link"><span>GitHub ↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="glass-card project-card" data-category="fullstack">
+            <div class="project-img-box">
+              <img src="assets/projects/neonexus.svg" alt="NeoNexus Cloud Observability" class="project-img">
+            </div>
+            <div class="project-info">
+              <h3>NeoNexus // K8s Observability Matrix</h3>
+              <p>Multi-tenant cloud monitoring dashboard displaying cluster pod topologies, live ingress wave metrics, and automated anomaly detection.</p>
+              <div class="project-tech">
+                <span class="badge">Next.js 14</span>
+                <span class="badge badge-purple">TypeScript</span>
+                <span class="badge">ClickHouse</span>
+                <span class="badge badge-pink">Tailwind</span>
+              </div>
+              <div class="project-links">
+                <a href="#contact" class="project-link"><span>Live Demo ↗</span></a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-link"><span>GitHub ↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="glass-card project-card" data-category="creative">
+            <div class="project-img-box">
+              <img src="assets/projects/cyberstream.svg" alt="CyberStream 60 FPS WebGL Engine" class="project-img">
+            </div>
+            <div class="project-info">
+              <h3>CyberStream // 60 FPS WebGL Engine</h3>
+              <p>Hardware-accelerated shader graphics engine written in WebGL and Rust WASM. Real-time procedural rendering with 240,000 vertices.</p>
+              <div class="project-tech">
+                <span class="badge">WebGL</span>
+                <span class="badge badge-purple">GLSL</span>
+                <span class="badge badge-pink">Rust WASM</span>
+                <span class="badge">Three.js</span>
+              </div>
+              <div class="project-links">
+                <a href="#contact" class="project-link"><span>Live Demo ↗</span></a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-link"><span>GitHub ↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="glass-card project-card" data-category="fullstack">
+            <div class="project-img-box">
+              <img src="assets/projects/quantumpay.svg" alt="QuantumPay Distributed Ledger" class="project-img">
+            </div>
+            <div class="project-info">
+              <h3>QuantumPay // High-Throughput Ledger</h3>
+              <p>Distributed financial transaction engine handling 150,000 TPS with sub-4ms settlement and zero-loss ACID consensus guarantees.</p>
+              <div class="project-tech">
+                <span class="badge badge-purple">Rust</span>
+                <span class="badge">Kafka</span>
+                <span class="badge">Redis</span>
+                <span class="badge badge-pink">PostgreSQL</span>
+              </div>
+              <div class="project-links">
+                <a href="#contact" class="project-link"><span>Live Demo ↗</span></a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-link"><span>GitHub ↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5 -->
+          <article class="glass-card project-card" data-category="creative">
+            <div class="project-img-box">
+              <img src="assets/projects/synthmind.svg" alt="SynthMind Agent Swarm" class="project-img">
+            </div>
+            <div class="project-info">
+              <h3>SynthMind // Multi-Agent Swarm</h3>
+              <p>Autonomous AI orchestration system featuring planner, coder, and critique swarms connected with RAG hybrid vector retrieval.</p>
+              <div class="project-tech">
+                <span class="badge">Python</span>
+                <span class="badge badge-purple">FastAPI</span>
+                <span class="badge badge-pink">VectorDB</span>
+                <span class="badge">Next.js</span>
+              </div>
+              <div class="project-links">
+                <a href="#contact" class="project-link"><span>Live Demo ↗</span></a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-link"><span>GitHub ↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 6 -->
+          <article class="glass-card project-card" data-category="cloud">
+            <div class="project-img-box">
+              <img src="assets/projects/hyperpulse.svg" alt="HyperPulse Terminal DevKit" class="project-img">
+            </div>
+            <div class="project-info">
+              <h3>HyperPulse // Terminal DevKit &amp; CLI</h3>
+              <p>Cross-platform developer tooling and microservice scaffolding tool written in Rust with Tokio. Generates zero-allocation HTTP servers.</p>
+              <div class="project-tech">
+                <span class="badge badge-purple">Rust</span>
+                <span class="badge">Tokio</span>
+                <span class="badge">WebAssembly</span>
+                <span class="badge badge-pink">CLI</span>
+              </div>
+              <div class="project-links">
+                <a href="#contact" class="project-link"><span>Live Demo ↗</span></a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-link"><span>GitHub ↗</span></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           7. ACHIEVEMENTS SECTION
+           =================================================================== -->
+      <section id="achievements" class="section" aria-labelledby="achieve-title">
+        <div class="section-head">
+          <span class="section-tag">// 06. MILESTONES &amp; HONORS</span>
+          <h2 class="section-title" id="achieve-title">
+            Key <span class="neon-text-gradient">Achievements</span>
+          </h2>
+          <p class="section-desc">
+            Competitive honors, community contributions, and recognized publications.
+          </p>
+        </div>
+
+        <div class="achievements-grid">
+          <div class="glass-card achievement-card">
+            <div class="achievement-icon">🥇</div>
+            <h3>1st Place: Global CyberSec Hackathon</h3>
+            <p>Won grand prize among 400+ international engineering teams for designing an automated zero-trust cloud isolation mesh.</p>
+            <div class="achievement-stat">⚡ $50k Grand Award • 2024</div>
+          </div>
+
+          <div class="glass-card achievement-card">
+            <div class="achievement-icon">⭐</div>
+            <h3>Top 1% Global Open Source Contributor</h3>
+            <p>Maintained high-performance devtools and WebGL libraries exceeding 15,000 GitHub stars and 2M downloads.</p>
+            <div class="achievement-stat">🌐 15k+ Stars • 2M+ Package Pulls</div>
+          </div>
+
+          <div class="glass-card achievement-card">
+            <div class="achievement-icon">🎙️</div>
+            <h3>Keynote Speaker @ DevNexus &amp; CloudCon</h3>
+            <p>Delivered technical sessions on "Scaling Rust Microservices Under Heavy Enterprise Concurrency" to 1,200+ engineers.</p>
+            <div class="achievement-stat">🗣️ 2x Keynote Speaker</div>
+          </div>
+
+          <div class="glass-card achievement-card">
+            <div class="achievement-icon">📜</div>
+            <h3>Published IEEE Conference Paper</h3>
+            <p>Authored paper on "Decentralized Telemetry Ingestion in High-Throughput Distributed Cloud Environments".</p>
+            <div class="achievement-stat">📄 Peer-Reviewed Publication</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           8. SERVICES SECTION
+           =================================================================== -->
+      <section id="services" class="section" aria-labelledby="services-title">
+        <div class="section-head">
+          <span class="section-tag">// 07. DEPLOYMENT CAPABILITIES</span>
+          <h2 class="section-title" id="services-title">
+            Services &amp; <span class="neon-text-gradient">Offerings</span>
+          </h2>
+          <p class="section-desc">
+            High-leverage engineering services tailored for tech enterprises and high-growth startups.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <div class="glass-card service-card">
+            <div class="service-icon">🏗️</div>
+            <h3>Full-Stack Architecture</h3>
+            <p>Architecting scalable frontend and backend platforms with Next.js, TypeScript, and Go/Rust backends.</p>
+            <ul class="service-list">
+              <li>End-to-End System Design</li>
+              <li>Micro-frontends &amp; Reusable Design Systems</li>
+              <li>Low-Latency API Engineering</li>
+            </ul>
+            <a href="#contact" class="btn btn-cyan" style="width:100%; font-size:0.8rem;">Request Quote</a>
+          </div>
+
+          <div class="glass-card service-card">
+            <div class="service-icon">☸️</div>
+            <h3>Cloud &amp; Kubernetes Infra</h3>
+            <p>Production cluster deployment, multi-region automated failover, Terraform IaC, and CI/CD pipelines.</p>
+            <ul class="service-list">
+              <li>Kubernetes Production Setup</li>
+              <li>Terraform Infrastructure Automation</li>
+              <li>Zero-Downtime Migration Strategies</li>
+            </ul>
+            <a href="#contact" class="btn btn-cyan" style="width:100%; font-size:0.8rem;">Request Quote</a>
+          </div>
+
+          <div class="glass-card service-card">
+            <div class="service-icon">✨</div>
+            <h3>Cyber UI/UX &amp; WebGL</h3>
+            <p>Crafting stunning interactive web applications with glassmorphism, 60 FPS shaders, and micro-animations.</p>
+            <ul class="service-list">
+              <li>Neon Cyberpunk Glass UI Design</li>
+              <li>Hardware-Accelerated 3D WebGL</li>
+              <li>100/100 Lighthouse Performance</li>
+            </ul>
+            <a href="#contact" class="btn btn-cyan" style="width:100%; font-size:0.8rem;">Request Quote</a>
+          </div>
+
+          <div class="glass-card service-card">
+            <div class="service-icon">🤖</div>
+            <h3>AI &amp; Real-Time Systems</h3>
+            <p>Integrating autonomous AI agents, RAG vector pipelines, and streaming WebSocket pipelines into existing software.</p>
+            <ul class="service-list">
+              <li>Autonomous Multi-Agent Swarms</li>
+              <li>Vector Database Search &amp; RAG</li>
+              <li>High-Throughput Streaming Queues</li>
+            </ul>
+            <a href="#contact" class="btn btn-cyan" style="width:100%; font-size:0.8rem;">Request Quote</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           9. TESTIMONIALS SECTION
+           =================================================================== -->
+      <section id="testimonials" class="section" aria-labelledby="testi-title">
+        <div class="section-head">
+          <span class="section-tag">// 08. VERIFIED SIGNALS</span>
+          <h2 class="section-title" id="testi-title">
+            Client &amp; Peer <span class="neon-text-gradient">Testimonials</span>
+          </h2>
+          <p class="section-desc">
+            Direct feedback from leaders and engineering partners.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="glass-card testimonial-card">
+            <div class="quote-mark">“</div>
+            <p class="testimonial-quote">
+              Rayan is in a league of his own. He restructured our multi-cluster Kubernetes platform and took our API p99 latency from nearly 400ms to under 30ms. Incredible velocity and engineering rigor.
+            </p>
+            <div class="testimonial-user">
+              <img src="assets/avatar-cyber.svg" alt="Sarah Chen" class="testimonial-avatar">
+              <div>
+                <div class="testimonial-name">Sarah Chen</div>
+                <div class="testimonial-title">VP of Engineering, Apex Cloud</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-card testimonial-card">
+            <div class="quote-mark">“</div>
+            <p class="testimonial-quote">
+              Finding an engineer who can write high-performance Rust while also designing jaw-dropping user interfaces is extraordinarily rare. Rayan delivered our flagship release weeks ahead of schedule.
+            </p>
+            <div class="testimonial-user">
+              <img src="assets/avatar-cyber.svg" alt="Marcus Vance" class="testimonial-avatar">
+              <div>
+                <div class="testimonial-name">Marcus Vance</div>
+                <div class="testimonial-title">CTO, SynthWave Technologies</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-card testimonial-card">
+            <div class="quote-mark">“</div>
+            <p class="testimonial-quote">
+              The level of craftsmanship in Rayan's design systems and WebGL components is world-class. Our user engagement metrics shot up by 45% immediately after his overhaul.
+            </p>
+            <div class="testimonial-user">
+              <img src="assets/avatar-cyber.svg" alt="Elena Rostova" class="testimonial-avatar">
+              <div>
+                <div class="testimonial-name">Elena Rostova</div>
+                <div class="testimonial-title">Head of Product, Nexus Cyber</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           10. CONTACT SECTION
+           =================================================================== -->
+      <section id="contact" class="section" aria-labelledby="contact-title">
+        <div class="section-head">
+          <span class="section-tag">// 09. DIRECT UPLINK</span>
+          <h2 class="section-title" id="contact-title">
+            Initiate <span class="neon-text-gradient">Transmission</span>
+          </h2>
+          <p class="section-desc">
+            Have a project, role, or architecture consulting opportunity? Transmit your signal below.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Form -->
+          <div class="glass-card contact-card">
+            <div id="form-status" class="form-status"></div>
+
+            <form id="contact-form" class="contact-form">
+              <div class="form-group">
+                <label for="name" class="form-label">&lt;SENDER_NAME /&gt;</label>
+                <input type="text" id="name" class="form-control" placeholder="E.g. Sarah Connor" required>
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">&lt;EMAIL_ADDRESS /&gt;</label>
+                <input type="email" id="email" class="form-control" placeholder="sarah@enterprise.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="subject" class="form-label">&lt;SERVICE_CATEGORY /&gt;</label>
+                <select id="subject" class="form-control">
+                  <option value="Full-Stack Engineering">Full-Stack Architecture &amp; Development</option>
+                  <option value="Cloud Infrastructure">Cloud &amp; Kubernetes Infrastructure</option>
+                  <option value="Cyber UI/UX">Cyber UI/UX &amp; High-Performance Web</option>
+                  <option value="AI Integration">AI Agents &amp; Real-Time Systems</option>
+                  <option value="Other Inquiries">General Collaboration / Inquiries</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message" class="form-label">&lt;TRANSMISSION_PAYLOAD /&gt;</label>
+                <textarea id="message" class="form-control" placeholder="Briefly describe your requirements, project scope, or timeline..." required></textarea>
+              </div>
+
+              <button type="submit" id="submit-btn" class="btn btn-cyan" style="width:100%; padding:0.9rem;">
+                ⚡ Send Transmission
+              </button>
+            </form>
+          </div>
+
+          <!-- Direct HUD Details -->
+          <div class="glass-card contact-card">
+            <h3 style="font-size:1.25rem; margin-bottom:1.5rem;">Direct Comms HUD</h3>
+            
+            <div class="contact-info-list">
+              <div class="contact-item">
+                <div class="contact-icon">✉️</div>
+                <div>
+                  <div class="contact-label">DIRECT EMAIL</div>
+                  <div class="contact-val">rayan@codecraft.dev</div>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <div>
+                  <div class="contact-label">OPERATIONAL LOCATION</div>
+                  <div class="contact-val">Remote / Worldwide (UTC±0 to +5:30)</div>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">💬</div>
+                <div>
+                  <div class="contact-label">DISCORD &amp; MATRIX</div>
+                  <div class="contact-val">@rayan_cyber_dev</div>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">🔐</div>
+                <div>
+                  <div class="contact-label">ENCRYPTION PGP</div>
+                  <div class="contact-val" style="font-family:var(--font-code); font-size:0.75rem;">
+                    4A72 E99B F810 C21D 994E
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top:2rem; padding-top:1.5rem; border-top:1px solid var(--border-glass);">
+              <span class="badge" style="width:100%; justify-content:center; padding:0.5rem;">
+                🟢 Average Response Latency: &lt; 12 Hours
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           11. FOOTER
+           =================================================================== -->
+      <footer class="site-footer">
+        <div class="footer-left">
+          <span style="font-weight:800; color:var(--text-primary);">RAYAN.SYS</span>
+          <span>© 2026 Rayan. All Rights Reserved. Built with Neon Cyberpunk &amp; Glassmorphism.</span>
+        </div>
+
+        <a href="#hero" class="back-top" title="Return to Top of Page" aria-label="Return to Top">
+          ▲
+        </a>
+      </footer>
+
+    </main>
+  </div>
+
+  <!-- Core JavaScript -->
+  <script src="scripts/main.js"></script>
+</body>
+</html>
